@@ -6,8 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 @Entity
 public class Contacts {
-   // Represents an individual person or contact.
-    //Fields may include first name, last name, email, phone number, address, etc.
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
