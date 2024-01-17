@@ -20,12 +20,13 @@ public class UserContoller {
     @Autowired
     public userRepo UserRepo;
 
-    @GetMapping("users")
+    @GetMapping("/users")
     public ResponseEntity<List<User>> getUsers(){
         List<User> users = UserRepo.findAll();
+        System.out.println("Hello world from the server!!!!!!!!");
         return new ResponseEntity(users, HttpStatus.OK);
     }
-    @GetMapping("users/{userID}")
+    @GetMapping("/users/{userID}")
     public ResponseEntity<User> getUser(@PathVariable Long userID){
         Optional<User> user = UserRepo.findById(userID);
         if (user.isPresent()){
