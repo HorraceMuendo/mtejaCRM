@@ -35,5 +35,8 @@ public class UserContoller {
             return new ResponseEntity(HttpStatus.OK);
         }
     }
+    public ResponseEntity<User> addUser(){
+
+    }
 
 }
