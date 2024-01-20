@@ -35,6 +35,7 @@ public class UserContoller {
     @PostMapping("")
     public ResponseEntity<User> addUser(){
 
+        return null;
     }
 
 }
