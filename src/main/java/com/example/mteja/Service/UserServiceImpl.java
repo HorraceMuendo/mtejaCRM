@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService{
         if (Objects.nonNull(user.getPassword()) && !"".equals(user.getPassword())){
             userInDB.setPassword(user.getPassword());
         }
-        
+
         return UserRepo.save(userInDB) ;
     }
 
