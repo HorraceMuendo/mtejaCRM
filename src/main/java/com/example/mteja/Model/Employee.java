@@ -1,10 +1,9 @@
 package com.example.mteja.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 @Entity
+@Table(name = "Employees")
 public class Employee {
    // Represents Employees or employees of the CRM system.
     //Includes information such as Employeename, role, and permissions.
