@@ -5,24 +5,24 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 @Entity
-public class User {
-   // Represents users or employees of the CRM system.
-    //Includes information such as username, role, and permissions.
+public class UserEmployee {
+   // Represents UserEmployees or employees of the CRM system.
+    //Includes information such as UserEmployeename, role, and permissions.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    private String username;
+    private String Username;
     private String password;
     private String email;
     private String role;
 
-    public User() {
+    public UserEmployee() {
     }
 
-    public User(Long id, String username, String password, String email, String role) {
+    public UserEmployee(Long id, String username, String password, String email, String role) {
         Id = id;
-        this.username = username;
+        Username = username;
         this.password = password;
         this.email = email;
         this.role = role;
@@ -36,12 +36,12 @@ public class User {
         Id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserEmployeename() {
+        return Username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserEmployeename(String UserEmployeename) {
+        this.Username = UserEmployeename;
     }
 
     public String getPassword() {
@@ -70,9 +70,9 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "UserEmployee{" +
                 "Id=" + Id +
-                ", username='" + username + '\'' +
+                ", UserEmployeename='" + Username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", role='" + role + '\'' +

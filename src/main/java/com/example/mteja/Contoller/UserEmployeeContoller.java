@@ -1,11 +1,10 @@
 package com.example.mteja.Contoller;
 
-import com.example.mteja.Model.User;
-import com.example.mteja.Repository.userRepo;
+import com.example.mteja.Model.UserEmployee;
+import com.example.mteja.Service.UserEmployeeServiceImpl;
 import com.example.mteja.Service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,21 +13,20 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/mteja/users")
-public class UserContoller {
+public class UserEmployeeContoller {
+
     @Autowired
-    private userRepo UserRepo;
-    @Autowired
-    private UserServiceImpl userService;
+    private UserEmployeeServiceImpl userService;
 
     @GetMapping("/")
-    public ResponseEntity<List<User>> getUsers(){
-        List<User> users = userService.getUsers();
+    public ResponseEntity<List<UserEmployee>> getUsers(){
+        List<UserEmployee> users = userService.getUserEmployees();
         System.out.println("Hello world from the server!!!!!!!!");
         return new ResponseEntity(users, HttpStatus.OK);
     }
     @GetMapping("/{userID}")
-    public ResponseEntity<User> getUser(@PathVariable Long userID){
-        Optional<User> user = userService.getUserById(userID);
+    public ResponseEntity<UserEmployee> getUser(@PathVariable Long userID){
+        Optional<UserEmployee> user = userService.getUserEmployeeById(userID);
         if (user.isPresent()){
             return new ResponseEntity(user.get(), HttpStatus.OK);
         }else {
@@ -36,18 +34,18 @@ public class UserContoller {
         }
     }
     @PostMapping("/addUser")
-    public ResponseEntity<User> addUser(@RequestBody User user){
-        return new ResponseEntity(userService.addUser(user), HttpStatus.OK);
+    public ResponseEntity<UserEmployee> addUser(@RequestBody UserEmployee user){
+        return new ResponseEntity(userService.addUserEmployee(user), HttpStatus.OK);
     }
 
     @PutMapping("{userID}")
-    public ResponseEntity updateUser(@RequestBody User user,@PathVariable Long userID){
+    public ResponseEntity updateUser(@RequestBody UserEmployee user,@PathVariable Long userID){
 
-        return new ResponseEntity(userService.updateUser(user,userID),HttpStatus.OK);
+        return new ResponseEntity(userService.updateUserEmployee(user,userID),HttpStatus.OK);
     }
     @DeleteMapping("{userID}")
     public ResponseEntity deleteUserById(@PathVariable Long userID){
-        userService.deleteUserById(userID);
+        userService.deleteUserEmployeeById(userID);
         return new ResponseEntity("User Deleted successfully",HttpStatus.OK);
     }
 }
