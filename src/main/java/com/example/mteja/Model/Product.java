@@ -1,9 +1,10 @@
 package com.example.mteja.Model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+@Entity
 public class Product {
   //  Represents the products or services offered by the company.
    // Contains details such as product name, description, and pricing.

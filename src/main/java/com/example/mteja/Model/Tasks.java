@@ -1,11 +1,13 @@
 package com.example.mteja.Model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 
+@Entity
 public class Tasks {
    // Represents tasks or to-dos related to customers or deals.
   //  Includes due dates, priorities, and assignees.
