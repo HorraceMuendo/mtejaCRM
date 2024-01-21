@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "Employees")
 public class Employee {
    // Represents Employees or employees of the CRM system.
-    //Includes information such as Employeename, role, and permissions.
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
