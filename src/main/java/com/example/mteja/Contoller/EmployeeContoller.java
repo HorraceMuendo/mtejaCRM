@@ -21,7 +21,6 @@ public class EmployeeContoller {
     @GetMapping("/")
     public ResponseEntity<List<Employee>> getUsers(){
         List<Employee> employees = employeeService.getEmployees();
-        System.out.println("Hello world from the server!!!!!!!!");
         return new ResponseEntity(employees, HttpStatus.OK);
     }
     @GetMapping("/{userID}")

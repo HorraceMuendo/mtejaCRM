@@ -1,10 +1,9 @@
 package com.example.mteja.Repository;
 
-import com.example.mteja.Model.Employee;
-
+import com.example.mteja.Model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface userRepo extends JpaRepository<Employee,Long> {
+public interface productRepo extends JpaRepository<Product,Long> {
 }
