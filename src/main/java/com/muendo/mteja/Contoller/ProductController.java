@@ -1,7 +1,7 @@
-package com.example.mteja.Contoller;
+package com.muendo.mteja.Contoller;
 
-import com.example.mteja.Model.Product;
-import com.example.mteja.Service.ProductServiceImpl;
+import com.muendo.mteja.Model.Product;
+import com.muendo.mteja.Service.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

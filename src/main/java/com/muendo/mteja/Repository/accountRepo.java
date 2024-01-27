@@ -1,6 +1,6 @@
-package com.example.mteja.Repository;
+package com.muendo.mteja.Repository;
 
-import com.example.mteja.Model.Account;
+import com.muendo.mteja.Model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

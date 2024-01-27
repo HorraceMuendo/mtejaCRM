@@ -1,4 +1,4 @@
-package com.example.mteja;
+package com.muendo.mteja;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.example.mteja.Service;
+package com.muendo.mteja.Service;
 
 public interface AccountService {
 

@@ -1,4 +1,4 @@
-package com.example.mteja;
+package com.muendo.mteja;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

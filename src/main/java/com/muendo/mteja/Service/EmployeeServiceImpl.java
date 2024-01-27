@@ -1,7 +1,7 @@
-package com.example.mteja.Service;
+package com.muendo.mteja.Service;
 
-import com.example.mteja.Model.Employee;
-import com.example.mteja.Repository.employeeRepo;
+import com.muendo.mteja.Model.Employee;
+import com.muendo.mteja.Repository.employeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.util.Optional;
 public class EmployeeServiceImpl implements EmployeeService{
 
  @Autowired
- private employeeRepo employeeRepo;
+ private com.muendo.mteja.Repository.employeeRepo employeeRepo;
 
     public EmployeeServiceImpl(employeeRepo employeeRepo) {
         this.employeeRepo = employeeRepo;

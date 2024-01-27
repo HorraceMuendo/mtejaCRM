@@ -1,6 +1,6 @@
-package com.example.mteja.Service;
+package com.muendo.mteja.Service;
 
-import com.example.mteja.Model.Product;
+import com.muendo.mteja.Model.Product;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,7 +1,7 @@
-package com.example.mteja.Service;
+package com.muendo.mteja.Service;
 
-import com.example.mteja.Model.Product;
-import com.example.mteja.Repository.ProductRepo;
+import com.muendo.mteja.Model.Product;
+import com.muendo.mteja.Repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 

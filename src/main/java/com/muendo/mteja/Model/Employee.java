@@ -1,4 +1,4 @@
-package com.example.mteja.Model;
+package com.muendo.mteja.Model;
 
 import jakarta.persistence.*;
 
