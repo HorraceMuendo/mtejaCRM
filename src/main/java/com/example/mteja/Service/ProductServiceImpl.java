@@ -38,11 +38,14 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product updateProductById(Product product, Long ProductID) {
+        Product productDB = productRepo.findById(ProductID).get();
+        
+
         return null;
     }
 
     @Override
     public void deleteProduct(Long ProductID) {
-
+        productRepo.deleteById(ProductID);
     }
 }
