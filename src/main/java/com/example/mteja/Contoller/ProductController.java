@@ -32,5 +32,14 @@ public class ProductController {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
     }
+    @PutMapping("/{ProductID}")
+    public ResponseEntity<Product> editProduct(@RequestBody Product product, @PathVariable Long ProductID){
+        return ResponseEntity.ok(productService.updateProduct(product, ProductID));
+    }
+    @DeleteMapping("{ProductID}")
+    public String deleteProductById(@PathVariable Long ProductID){
+        productService.deleteProduct(ProductID);
+        return "Product_Deleted_Successfully";
+    }
 
 }

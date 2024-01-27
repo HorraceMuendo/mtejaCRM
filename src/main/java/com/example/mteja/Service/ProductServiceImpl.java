@@ -43,7 +43,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product updateProductById(Product product, Long ProductID) {
+    public Product updateProduct(Product product, Long ProductID) {
         Product productDB = productRepo.findById(ProductID).get();
         if (Objects.nonNull(product.getProductName()) && !"".equalsIgnoreCase(product.getProductName())) {
             productDB.setProductName(product.getProductName());
