@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/mteja/users")
-public class EmployeeContoller {
+public class EmployeeController {
 
     @Autowired
     private EmployeeServiceImpl employeeService;

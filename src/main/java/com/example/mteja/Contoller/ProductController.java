@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/mteja/products")
 public class ProductController {
@@ -21,5 +23,14 @@ public class ProductController {
         return new ResponseEntity(productService.getProducts(),HttpStatus.OK);
     }
     @GetMapping("/{ProductID}")
+    public ResponseEntity<Product> getProductById(@PathVariable Long ProductID){
+        Optional<Product> product = productService.getProductById(ProductID);
+        if (product.isPresent()){
+            return ResponseEntity.ok(product.get());
+        }
+        else {
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        }
+    }
 
 }
