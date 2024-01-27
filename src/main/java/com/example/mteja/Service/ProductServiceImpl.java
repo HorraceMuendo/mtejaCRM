@@ -2,9 +2,8 @@ package com.example.mteja.Service;
 
 import com.example.mteja.Model.Product;
 import com.example.mteja.Repository.ProductRepo;
-import com.example.mteja.Repository.employeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

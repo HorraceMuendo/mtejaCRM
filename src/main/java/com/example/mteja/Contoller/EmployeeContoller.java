@@ -32,7 +32,7 @@ public class EmployeeContoller {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
     }
-    @PostMapping("/addUser")
+    @PostMapping("/addEmployee")
     public ResponseEntity<Employee> addUser(@RequestBody Employee employee){
         return new ResponseEntity(employeeService.addEmployee(employee), HttpStatus.OK);
     }
