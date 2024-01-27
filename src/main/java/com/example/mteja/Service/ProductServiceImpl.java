@@ -18,6 +18,12 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepo productRepo;
 
+    public ProductServiceImpl() {
+    }
+
+    public ProductServiceImpl(ProductRepo productRepo) {
+        this.productRepo = productRepo;
+    }
 
     @Override
     public Product addProduct(Product product) {
