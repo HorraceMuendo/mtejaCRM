@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -39,9 +40,17 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product updateProductById(Product product, Long ProductID) {
         Product productDB = productRepo.findById(ProductID).get();
-        
+        if (Objects.nonNull(product.getProductName()) && !"".equalsIgnoreCase(product.getProductName())) {
+            productDB.setProductName(product.getProductName());
+        }
+        if (Objects.nonNull(product.getDescription()) && !"".equalsIgnoreCase(product.getDescription())){
+            productDB.setDescription(product.getDescription());
+        }
+        if (Objects.nonNull(product.getPrice()) ){
+            productDB.setPrice(product.getPrice());
+        }
 
-        return null;
+        return productRepo.save(productDB);
     }
 
     @Override
