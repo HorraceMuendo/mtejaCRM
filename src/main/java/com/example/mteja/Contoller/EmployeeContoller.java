@@ -23,9 +23,9 @@ public class EmployeeContoller {
         List<Employee> employees = employeeService.getEmployees();
         return new ResponseEntity(employees, HttpStatus.OK);
     }
-    @GetMapping("/{userID}")
-    public ResponseEntity<Employee> getUser(@PathVariable Long userID){
-        Optional<Employee> employee = employeeService.getEmployeeById(userID);
+    @GetMapping("/{employeeID}")
+    public ResponseEntity<Employee> getUser(@PathVariable Long employeeID){
+        Optional<Employee> employee = employeeService.getEmployeeById(employeeID);
         if (employee.isPresent()){
             return new ResponseEntity(employee.get(), HttpStatus.OK);
         }else {
@@ -37,14 +37,14 @@ public class EmployeeContoller {
         return new ResponseEntity(employeeService.addEmployee(employee), HttpStatus.OK);
     }
 
-    @PutMapping("{userID}")
-    public ResponseEntity updateUser(@RequestBody Employee employee,@PathVariable Long userID){
+    @PutMapping("{employeeID}")
+    public ResponseEntity updateUser(@RequestBody Employee employee,@PathVariable Long employeeID){
 
-        return new ResponseEntity(employeeService.updateEmployee(employee,userID),HttpStatus.OK);
+        return new ResponseEntity(employeeService.updateEmployee(employee,employeeID),HttpStatus.OK);
     }
-    @DeleteMapping("{userID}")
-    public ResponseEntity deleteUserById(@PathVariable Long userID){
-        employeeService.deleteEmployeeById(userID);
+    @DeleteMapping("{employeeID}")
+    public ResponseEntity deleteUserById(@PathVariable Long employeeID){
+        employeeService.deleteEmployeeById(employeeID);
         return new ResponseEntity("User Deleted successfully",HttpStatus.OK);
     }
 }

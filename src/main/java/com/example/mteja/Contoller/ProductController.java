@@ -20,4 +20,6 @@ public class ProductController {
     public ResponseEntity<Product> getProducts(){
         return new ResponseEntity(productService.getProducts(),HttpStatus.OK);
     }
+    @GetMapping("/{ProductID}")
+
 }
