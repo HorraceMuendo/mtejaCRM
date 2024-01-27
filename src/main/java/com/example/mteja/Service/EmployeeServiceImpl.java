@@ -14,6 +14,13 @@ public class EmployeeServiceImpl implements EmployeeService{
  @Autowired
  private employeeRepo employeeRepo;
 
+    public EmployeeServiceImpl(employeeRepo employeeRepo) {
+        this.employeeRepo = employeeRepo;
+    }
+
+    Employee getByUsername(String username){
+     return employeeRepo.findByUsername(username);
+ }
     @Override
     public Employee addEmployee(Employee employee) {
         return employeeRepo.save(employee);
