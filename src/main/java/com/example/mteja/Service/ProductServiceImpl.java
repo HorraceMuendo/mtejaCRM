@@ -4,6 +4,8 @@ import com.example.mteja.Model.Product;
 import com.example.mteja.Repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,7 +30,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Optional<Product> getProductById(Long ProductID) {
-        return Optional.empty();
+        Optional<Product> product = productRepo.findById(ProductID);
+      
+            return product;
+
     }
 
     @Override
