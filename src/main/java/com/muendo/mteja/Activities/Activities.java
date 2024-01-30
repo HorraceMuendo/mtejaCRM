@@ -11,7 +11,7 @@ public class Activities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    private String type;//
+    private String type;// email,sms,call,email
     private LocalDateTime localDateTime;
     private String Description;
 

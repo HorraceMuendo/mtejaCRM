@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.List;
+
 @Entity
 public class Account {
   //  Represents an existing customer or client.
@@ -21,6 +23,9 @@ public class Account {
     //e.g., customer, client, partner
     private String accountType;
     private String address;
+
+    private List<Contacts> contacts;
+    private List<>
 
     public Account() {
     }
