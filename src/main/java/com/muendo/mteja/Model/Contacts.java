@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 @Entity
 public class Contacts {
-
+// encompasses wide range of entities such as prospects,leads,customers, partners, suppliers and other stakeholders
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
@@ -14,9 +14,15 @@ public class Contacts {
     private String FirstName;
     private String LastName;
     private String Email;
+    private String phoneNumber;
     private String Address;
+    private String jobTitle;
 
     public Contacts() {
+    }
+
+    public Contacts(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public Contacts(Long id, String firstName, String lastName, String email, String address) {
@@ -25,6 +31,14 @@ public class Contacts {
         LastName = lastName;
         Email = email;
         Address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public Long getId() {

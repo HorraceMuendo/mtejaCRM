@@ -15,6 +15,7 @@ public class Employee {
     private String password;
     private String email;
     private String role;
+    // private String permission
 
     public Employee() {
     }

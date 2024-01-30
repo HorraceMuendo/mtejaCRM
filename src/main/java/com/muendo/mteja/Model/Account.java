@@ -14,6 +14,8 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     private String accountName;
+    private String accountNumber;
+
     private String industry;
     private String size;
     private String accountType;
@@ -22,13 +24,22 @@ public class Account {
     public Account() {
     }
 
-    public Account(Long id, String accountName, String industry, String size, String accountType, String address) {
+    public Account(Long id, String accountName, String accountNumber, String industry, String size, String accountType, String address) {
         Id = id;
         this.accountName = accountName;
+        this.accountNumber = accountNumber;
         this.industry = industry;
         this.size = size;
         this.accountType = accountType;
         this.address = address;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public Long getId() {
