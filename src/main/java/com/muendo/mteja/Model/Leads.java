@@ -15,11 +15,23 @@ public class Leads {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long Id;
     private String leadSource;
+    //new,contacted,qualified,lost
     private String status;
     private Double estimatedValue;
     private LocalDate creationDate;
+    // contacts of the lead
+    private String leadName;
+    private String email;
+    private String phoneNumber;
+
 
     public Leads() {
+    }
+
+    public Leads(String leadName, String email, String phoneNumber) {
+        this.leadName = leadName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     public Leads(Long id, String leadSource, String status, Double estimatedValue, LocalDate creationDate) {
@@ -28,6 +40,30 @@ public class Leads {
         this.status = status;
         this.estimatedValue = estimatedValue;
         this.creationDate = creationDate;
+    }
+
+    public String getLeadName() {
+        return leadName;
+    }
+
+    public void setLeadName(String leadName) {
+        this.leadName = leadName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public Long getId() {
