@@ -15,9 +15,10 @@ public class Account {
     private Long Id;
     private String accountName;
     private String accountNumber;
-
+    //The industry or sector to which the account belongs (e.g., healthcare, finance, technology)
     private String industry;
     private String size;
+    //e.g., customer, client, partner
     private String accountType;
     private String address;
 

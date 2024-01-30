@@ -24,6 +24,10 @@ public class Leads {
     private String email;
     private String phoneNumber;
 
+    private Account account;
+
+
+
 
     public Leads() {
     }
