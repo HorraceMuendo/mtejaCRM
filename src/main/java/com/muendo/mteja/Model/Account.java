@@ -1,5 +1,6 @@
 package com.muendo.mteja.Model;
 
+import com.muendo.mteja.Opportunities.Opportunities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,7 +26,7 @@ public class Account {
     private String address;
 
     private List<Contacts> contacts;
-    private List<>
+    private List<Opportunities> opportunities;
 
     public Account() {
     }
