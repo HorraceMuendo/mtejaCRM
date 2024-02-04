@@ -1,9 +1,7 @@
-package com.muendo.mteja.Opportunities;
+package com.muendo.mteja.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.muendo.mteja.Model.Account;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 @Entity
@@ -15,6 +13,9 @@ public class Opportunities {
     private String value;
     private String stage;
     private LocalDateTime localDateTime;
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 
     public Opportunities() {
     }

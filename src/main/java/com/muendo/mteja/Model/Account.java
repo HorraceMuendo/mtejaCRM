@@ -1,6 +1,5 @@
 package com.muendo.mteja.Model;
 
-import com.muendo.mteja.Opportunities.Opportunities;
 import jakarta.persistence.*;
 
 import java.util.List;

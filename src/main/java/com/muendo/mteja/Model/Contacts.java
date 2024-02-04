@@ -1,9 +1,7 @@
 package com.muendo.mteja.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 @Entity
 public class Contacts {
 // encompasses wide range of entities such as prospects,leads,customers, partners, suppliers and other stakeholders
@@ -17,6 +15,10 @@ public class Contacts {
     private String phoneNumber;
     private String address;
     private String jobTitle;
+
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 
     public Contacts() {
     }
