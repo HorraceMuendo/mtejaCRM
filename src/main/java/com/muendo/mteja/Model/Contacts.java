@@ -11,11 +11,11 @@ public class Contacts {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    private String FirstName;
-    private String LastName;
-    private String Email;
+    private String firstName;
+    private String lastName;
+    private String email;
     private String phoneNumber;
-    private String Address;
+    private String address;
     private String jobTitle;
 
     public Contacts() {
@@ -23,28 +23,12 @@ public class Contacts {
 
     public Contacts(Long id, String firstName, String lastName, String email, String phoneNumber, String address, String jobTitle) {
         Id = id;
-        FirstName = firstName;
-        LastName = lastName;
-        Email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
         this.phoneNumber = phoneNumber;
-        Address = address;
+        this.address = address;
         this.jobTitle = jobTitle;
-    }
-
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     public Long getId() {
@@ -56,45 +40,51 @@ public class Contacts {
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "Contacts{" +
-                "Id=" + Id +
-                ", FirstName='" + FirstName + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", Email='" + Email + '\'' +
-                ", Address='" + Address + '\'' +
-                '}';
+    public String getJobTitle() {
+        return jobTitle;
     }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
 }

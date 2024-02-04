@@ -1,10 +1,7 @@
 package com.muendo.mteja.Model;
 
 import com.muendo.mteja.Opportunities.Opportunities;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -24,8 +21,9 @@ public class Account {
     //e.g., customer, client, partner
     private String accountType;
     private String address;
-
+    @OneToMany(mappedBy = "account")
     private List<Contacts> contacts;
+    @OneToMany(mappedBy = "account")
     private List<Opportunities> opportunities;
 
     public Account() {
