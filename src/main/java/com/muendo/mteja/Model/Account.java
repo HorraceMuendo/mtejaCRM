@@ -24,6 +24,8 @@ public class Account {
     private List<Contacts> contacts;
     @OneToMany(mappedBy = "account")
     private List<Opportunities> opportunities;
+    @OneToMany(mappedBy = "account")
+    private List<Leads> leads;
 
     public Account() {
     }

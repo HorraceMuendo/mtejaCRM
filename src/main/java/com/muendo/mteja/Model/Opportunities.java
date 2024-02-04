@@ -1,6 +1,6 @@
 package com.muendo.mteja.Model;
 
-import com.muendo.mteja.Model.Account;
+
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

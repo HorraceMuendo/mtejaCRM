@@ -1,9 +1,6 @@
 package com.muendo.mteja.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -24,6 +21,8 @@ public class Leads {
     private String email;
     private String phoneNumber;
 
+    @ManyToOne
+    @JoinColumn(name = "account_id")
     private Account account;
 
 
