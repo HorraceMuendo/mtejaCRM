@@ -14,7 +14,7 @@ public class Opportunities {
     private String stage;
     private LocalDateTime localDateTime;
     @ManyToOne
-    @JoinColumn(name = "account_id")
+    @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 
     public Opportunities() {

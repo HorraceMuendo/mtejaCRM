@@ -1,4 +1,6 @@
 package com.muendo.mteja.Repository;
 
-public interface Opportunities {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Opportunities extends JpaRepository<Opportunities,Long> {
 }

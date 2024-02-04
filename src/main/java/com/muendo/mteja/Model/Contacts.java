@@ -17,7 +17,7 @@ public class Contacts {
     private String jobTitle;
 
     @ManyToOne
-    @JoinColumn(name = "account_id")
+    @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 
     public Contacts() {
