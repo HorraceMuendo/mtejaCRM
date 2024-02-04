@@ -21,16 +21,22 @@ public class Contacts {
     public Contacts() {
     }
 
-    public Contacts(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Contacts(Long id, String firstName, String lastName, String email, String address) {
+    public Contacts(Long id, String firstName, String lastName, String email, String phoneNumber, String address, String jobTitle) {
         Id = id;
         FirstName = firstName;
         LastName = lastName;
         Email = email;
+        this.phoneNumber = phoneNumber;
         Address = address;
+        this.jobTitle = jobTitle;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public String getPhoneNumber() {
